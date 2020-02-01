@@ -17,7 +17,8 @@ function avgscore() {
 function avgscore2dp() {
     var score = document.getElementById("myscore").value ;
 var scoreHack = parseFloat(score).toFixed(2);  //fixes input to 2 dp.
-var scoreAvg = Math.ceil(score); //rounds up much small decimals to next whole integer. .floor rounds down.
+var scoreAvg = Math.ceil(score); /*rounds up much small decimals to next whole integer. 
+HOWEVER, when rounding up or down the parseFloat is irrelevant of course. */
 
     if (score >= 1.000000000) {
       alert (scoreAvg);
